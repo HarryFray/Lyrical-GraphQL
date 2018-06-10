@@ -12,8 +12,13 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 
 // this file is minimum config for react with apollo
-// need apollo
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  //takes every piece of data comming from qpollo client
+  // and runs it through this function
+  // use id of reccord in apollo store...Apollo does not
+  // want to auto assume this.
+  dataIdFromObject: o => o.id
+});
 
 const Root = () => {
   return (

@@ -24,7 +24,8 @@ class SongCreate extends Component {
       // upon second rendering...
       // second param below would be where vars go if
       // query required those
-      refetchQueries: [{ query }]
+      //(this method works.... or you can config apollo to know about ids!)
+      //refetchQueries: [{ query }]
     }).then(() => hashHistory.push('/'))
   }
 
