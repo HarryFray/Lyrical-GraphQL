@@ -11,10 +11,9 @@ class SongDetail extends Component {
 
   render() {
     const { song } = this.props.data
-    if (!song) return <div>'Loading...'</div>
+    if (!song) return <div></div>
     return (
       <div>
-        <Link to="/"> Back </Link>
         <h3>{song.title}</h3>
         <LyricList lyrics={song.lyrics} />
         <LyricCreate songid={this.props.params.id} />

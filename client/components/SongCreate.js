@@ -34,7 +34,6 @@ class SongCreate extends Component {
   render() {
     return (
       <div>
-        <Link to="/"> Back </Link>
         <h3>Create a new Song</h3>
         <form onSubmit={this.onSubmit.bind(this)}>
           <label>Song Title:</label>

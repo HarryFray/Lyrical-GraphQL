@@ -37,7 +37,7 @@ class SongList extends Component {
     // must throw in this case graph ql causees 
     // component to be render 2 times
     // first time no data available....
-    if (this.props.data.loading) return <div>{'Loading...'}</div>
+    if (this.props.data.loading) return <div></div>
     return (
       <div>
         <ul className="collection">

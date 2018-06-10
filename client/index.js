@@ -23,6 +23,7 @@ const client = new ApolloClient({
 const Root = () => {
   return (
     <ApolloProvider client={client}>
+
       <Router history={hashHistory}>
 
         <Route path="/" component={App}>
