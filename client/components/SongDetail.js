@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router';
+import LyricCreate from './LyricCreate';
+import query from '../queries/fetchSongDetails';
 
 
 
@@ -14,19 +15,12 @@ class SongDetail extends Component {
       <div>
         <Link to="/"> Back </Link>
         <h3>{song.title}</h3>
+        <LyricCreate songid={this.props.params.id} />
       </div>
     )
   }
 }
 
-const query = gql`
-query SongQuery($id: ID!) {
-  song(id: $id) {
-    id
-    title
-  }
-}
-`;
 // reuse this patter whenever a query requires a param
 // mutations are manually called
 // queries are auto called for us...therefore we 
