@@ -17,7 +17,7 @@ const client = new ApolloClient({
   // and runs it through this function
   // use id of reccord in apollo store...Apollo does not
   // want to auto assume this.
-  dataIdFromObject: o => o.id
+  dataIdFromObject: object => object.id
 });
 
 const Root = () => {
