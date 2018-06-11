@@ -5,13 +5,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const schema = require('./schema/schema');
 
+require('dotenv').config()
+
 
 const app = express();
 
-
-
-// Replace with your mongoLab URI
-const MONGO_URI = 'mongodb://harry:levi123@ds153980.mlab.com:53980/lyrical-graphql';
+const MONGO_URI = process.env.MONGO_URI;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
